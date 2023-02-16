@@ -72,3 +72,9 @@ group :test do
 end
 
 gem 'sorcery'
+
+gem 'activeadmin'
+
+gem 'devise'
+
+gem 'sassc-rails'
