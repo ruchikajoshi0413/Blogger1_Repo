@@ -7,7 +7,8 @@ RSpec.describe "An Example Group with a metadata variable", :foo => 17 do
          expect(example.metadata[:foo]).to eq(17) 
          expect(example.metadata[:bar]).to eq(12) 
          example.metadata.each do |k,v|
-         puts "#{k}: #{v}"
+            puts "#{k}: #{v}"
+         end
       end
 		
    end 
