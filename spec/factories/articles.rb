@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :article do
-    title { 'Like a Rolling Stone' }
-    body { 'React' }
+    title { 'Ruby on Rails' }
+    body { 'Ruby..' }
   end
 end

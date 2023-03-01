@@ -10,7 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_15_094614) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_01_055255) do
+  create_table "about_mes", force: :cascade do |t|
+    t.text "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
@@ -54,6 +60,17 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_15_094614) do
     t.index ["email"], name: "index_authors_on_email", unique: true
   end
 
+  create_table "charges", force: :cascade do |t|
+    t.string "charges_type"
+    t.string "design"
+    t.string "photography"
+    t.string "storage"
+    t.string "support"
+    t.integer "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "comments", force: :cascade do |t|
     t.string "author_name"
     t.text "body"
@@ -61,6 +78,41 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_15_094614) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["article_id"], name: "index_comments_on_article_id"
+  end
+
+  create_table "contact_mes", force: :cascade do |t|
+    t.string "email"
+    t.string "city"
+    t.string "contact_no"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "notebooks", force: :cascade do |t|
+    t.string "title"
+    t.text "body"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "projects", force: :cascade do |t|
+    t.string "image"
+    t.string "title"
+    t.string "description"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "skills", force: :cascade do |t|
+    t.string "name"
+    t.integer "expertise"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "taggings", force: :cascade do |t|
@@ -73,6 +125,12 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_15_094614) do
   end
 
   create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "users", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

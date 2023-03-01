@@ -73,6 +73,11 @@ group :test do
   gem "webdrivers"
   gem 'rspec-rails', '~> 6.0.0'
   gem 'factory_bot_rails'
+
+  gem 'rails-controller-testing',     '~> 1.0.2'
+  gem 'shoulda',                      '~> 3.5'
+  gem 'shoulda-callback-matchers',    '~> 1.1', '>= 1.1.3'
+  gem 'simplecov',                    '~> 0.15.1',              require: false
 end
 
 gem 'sorcery'
@@ -84,5 +89,10 @@ gem 'devise'
 gem 'sassc-rails'
 
 gem 'faker'
+
+group :test do
+  gem 'database_cleaner-active_record'
+end
+
 
 
