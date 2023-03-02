@@ -11,7 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[7.0].define(version: 2023_03_01_055255) do
-  create_table "about_mes", force: :cascade do |t|
+  create_table "aboutmes", force: :cascade do |t|
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -80,7 +80,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_055255) do
     t.index ["article_id"], name: "index_comments_on_article_id"
   end
 
-  create_table "contact_mes", force: :cascade do |t|
+  create_table "contactmes", force: :cascade do |t|
     t.string "email"
     t.string "city"
     t.string "contact_no"

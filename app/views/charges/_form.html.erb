@@ -1,0 +1,36 @@
+<%= form_for(@charge) do |f| %>
+    <ul>
+    <% @charge.errors.full_messages.each do |error| %>
+      <li><%= error %></li>
+    <% end %>
+    </ul>
+    <p>
+      <%= f.label :charges_type %><br />
+      <%= f.file_field :charges_type %>
+    </p>
+    <p>
+      <%= f.label :design %><br />
+      <%= f.text_area :design %>
+    </p>
+    <p>
+      <%= f.label :photography %><br />
+      <%= f.text_field :photography %>
+    </p>
+    <p>
+      <%= f.label :storage %><br />
+      <%= f.text_area :storage %>
+    </p>
+    <p>
+      <%= f.label :support %><br />
+      <%= f.text_area :support %>
+    </p>
+    <p>
+      <%= f.label :price %><br />
+      <%= f.text_area :price %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
+
+      
