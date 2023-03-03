@@ -1,4 +1,4 @@
-class Project < ApplicationRecord
+class Project1 < ApplicationRecord
     mount_uploader :image, AvatarUploader
 
     validates :image, presence: true

@@ -1,7 +1,8 @@
 <div class="w3-row-padding">
-    <% Project.all.each do |project|%>        
+    <% Project1.all.each do |project|%>        
             <div class="w3-third w3-container w3-margin-bottom">
-              <%= image_tag 'p2.jpg', style: "width:100%" %>
+              <%#= image_tag 'p2.jpg', style: "width:100%" %>
+              <img src="<%= project.image %>" alt="RJ" style= "width:100%">
               <strong><%= project.title %></strong><br>
               <%= project.description %>
             </div>

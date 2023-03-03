@@ -2,7 +2,9 @@
 <div class="w3-row-padding">
     <% Project.all.each do |pro|%>        
             <div class="w3-third w3-container w3-margin-bottom">
-              <%= image_tag 'mountains.jpg', style: "width:100%" %>
+              <%#= image_tag 'mountains.jpg', style: "width:100%" %>
+              <img src="<%= pro.image %>" alt="Ruchika" style= "width:100%">
+              
               <strong><%= pro.title %></strong><br>
               <%= pro.description %>
 

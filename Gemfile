@@ -94,5 +94,6 @@ group :test do
   gem 'database_cleaner-active_record'
 end
 
+gem 'carrierwave', '>= 3.0.0.beta', '< 4.0'
 
 
