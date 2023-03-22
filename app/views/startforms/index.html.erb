@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Startforms</h1>
+
+<div id="startforms">
+  <% @startforms.each do |start| %>
+    <%= render start %>
+    <p>
+      <%= link_to "Show this startform", start %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New startform", new_startform_path %>
+
+<form action="/startforms">
+  <label >number:</label><br>
+  <input type="text" name="search_number" ><br>
+  <label >name:</label><br>
+  <input type="text" name="search_name" ><br>
+  <input type="submit" value = "search">
+</form>

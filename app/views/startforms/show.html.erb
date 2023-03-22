@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @startform %>
+
+<div>
+  <%= link_to "Edit this startform", edit_startform_path(@startform) %> |
+  <%= link_to "Back to startforms", startforms_path %>
+
+  <%= button_to "Destroy this startform", @startform, method: :delete %>
+  
+</div>

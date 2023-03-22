@@ -3,7 +3,8 @@ class CreateSkills < ActiveRecord::Migration[7.0]
     create_table :skills do |t|
       t.string :name 
       t.integer :expertise
-
+      t.boolean :status
+      
       t.timestamps
     end
   end

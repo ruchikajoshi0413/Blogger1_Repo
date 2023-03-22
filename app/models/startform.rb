@@ -1,0 +1,2 @@
+class Startform < ApplicationRecord
+end

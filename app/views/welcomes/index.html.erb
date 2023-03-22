@@ -47,6 +47,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
       <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Design</button>
       <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Photos</button>
       <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>
+      <button class="w3-button w3-black">Search</button>
     </div>
     </div>
   </header>
@@ -54,7 +55,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   <!-- First Photo Grid-->
   <%#= render partial: 'welcomes/firstgrid' %>
 
-  <% Project.all.each_slice(3).each do |pro| %>
+  <% @projects.each_slice(3).each do |pro| %>
   <%= render 'firstgrid', firstgrid: pro %>
     <%#= pro.title %><br>
     <%#= pro.description %>
@@ -65,7 +66,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
   <!-- Second Photo Grid-->
   <%#= render partial: 'welcomes/secondgrid' %>
 
-  <% Project1.all.each_slice(3).each do |project| %>
+  <% @project1s.each_slice(3).each do |project| %>
   <%= render 'secondgrid', secondgrid: project %>
     <%#= pro.title %><br>
     <%#= pro.description %>
@@ -87,21 +88,21 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
 
   <!-- Images of Me -->
   <%#= render partial: 'welcomes/imageme' %>
-    <% Picture.all.each_slice(3).each do |pic| %>
+    <% @pictures.each_slice(3).each do |pic| %>
       <%= render 'imageme', imageme: pic %>
     <% end %>
     
 
   <!-- Aboout Me-->
   <%#= render partial: 'welcomes/aboutme' %>
-    <% Aboutme.all.each_slice(3).each do |about| %>
+    <% @aboutmes.each_slice(3).each do |about| %>
       <%= render 'aboutme', aboutme: about %>
     <% end %>
 
    
     <!-- Progress bars / Skills -->
     <%#= render partial: 'welcomes/progressbar' %>
-    <% Skill.all.each_slice(3).each do |progress| %>
+    <% @skills.each_slice(3).each do |progress| %>
         <%= render 'progressbar', progressbar: progress %>
     <% end %>
     
@@ -109,14 +110,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
     <!-- Pricing Tables -->
     <%#= render partial: 'welcomes/pricing' %>
 
-      <% Charge.all.each_slice(3).each do |price| %>
+      <% @charges.each_slice(3).each do |price| %>
         <%= render 'pricing', pricing: price %>
       <% end %>
 
   <!-- Contact Section -->
   <%#= render partial: 'welcomes/contactsection' %>
 
-    <% Contactme.all.each_slice(3).each do |contact| %>
+    <% @contactmes.each_slice(3).each do |contact| %>
       <%= render 'contactsection', contactsection: contact %>
     <% end %>
 

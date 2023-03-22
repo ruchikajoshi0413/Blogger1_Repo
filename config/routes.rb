@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  resources :startforms
+  resources :starts
     get 'welcomes/index'
+    
   
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
@@ -7,7 +10,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
 
-  root 'welcomes#index'
+  # root 'welcomes#index'
+  root 'startforms#index'
   # root "articles#index"
   resources :articles do
     resources :comments
